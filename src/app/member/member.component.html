@@ -1,0 +1,14 @@
+<h2>My Team Mates:</h2>
+<ul>
+    <li *ngFor="let member of members">
+        <button type="button" (click)="onSelect(member)"><!--Event Binding-->
+            <span>
+                    {{member.id}}
+            </span>
+            <span>
+                {{member.name}}
+            </span>
+        </button>
+    </li>
+</ul>
+<app-memberdetails [member]="selectedMember"></app-memberdetails> <!---Property Binding-->
